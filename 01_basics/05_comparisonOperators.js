@@ -22,3 +22,13 @@ console.log(2!=3) //1
 console.log("2"==3)  //0
 console.log("2"!==2) //1 
 //strictly check both datatype and values
+
+//Not a good practice
+console.log(null>0) //false
+console.log(null==0) //false
+console.log(null>=0) //true
+/* why case 3 is true */
+/*Because comparison operator >=,<=,>,< convert null into 0 and then compare but == don't do this*/
+console.log(undefined>0) //false
+console.log(undefined==0) //false
+console.log(undefined>=0) //false
