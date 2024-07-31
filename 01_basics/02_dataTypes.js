@@ -24,3 +24,20 @@ console.log(typeof rollNo) //number
 console.log(typeof isLoggedIn) //boolean
 console.log(typeof village) //undefined
 console.log(typeof ["name",221013,"cinema"]) //object
+
+
+//Return type of variables in JavaScript
+//Primitive Datatypes => can't give refrence
+/*     Number => number
+       String  => string
+       Boolean  => boolean
+       null  => object
+       undefined  =>  undefined
+       Symbol  =>  symbol
+       BigInt  =>  bigint
+*/
+//Non-primitive Datatypes => always give reference
+/*     Arrays  =>  object
+       Function  =>  function
+       Object  =>  object
+*/
