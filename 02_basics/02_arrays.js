@@ -24,8 +24,9 @@ console.log(real_another_array);
 
 console.log(Array.isArray("Hitesh")) //false
 console.log(Array.from("Hitesh")) //give a char array from Hitesh
+
 //not give an array
-console.log(Array.from({name: "hitesh"})) // interesting
+console.log(Array.from({name: "hitesh"})) //Interesting
 
 let score1 = 100
 let score2 = 200
