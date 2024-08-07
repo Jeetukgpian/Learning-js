@@ -64,6 +64,9 @@ const course = {
     courseInstructor: "hitesh"
 }
 
+
+//->Object destructuring
+
 // course.courseInstructor
 //other way to assign new variable to a given variable/key courseInstructor is replaced by instructor 
 const {courseInstructor: instructor} = course
@@ -71,7 +74,9 @@ const {courseInstructor: instructor} = course
 // console.log(courseInstructor);
 console.log(instructor);
 
-//other two ways to make an object => inside a way to create in js
+//JSON = Javascript object notation
+//Json file { string:string }
+//We got api's in the given two formats
 // {
 //     "name": "hitesh",
 //     "coursename": "js in hindi",
