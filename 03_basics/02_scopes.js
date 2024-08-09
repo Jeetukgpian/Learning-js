@@ -67,3 +67,21 @@ const addTwo = function(num){
 
 
 //Function Expression (addTwo): The addTwo function is defined using a function expression and stored in a const variable. Unlike function declarations, function expressions are not hoisted. The variable addTwo is hoisted, but it remains undefined until the code execution reaches the function expression. If you try to call addTwo before it's defined, you'll get a TypeError because you're trying to invoke something that isn't yet a function.
+
+console.log(x); // ReferenceError: Cannot access 'x' before initialization
+let x = 10;
+console.log(x); // 10
+
+
+console.log(y); // ReferenceError: Cannot access 'y' before initialization
+const y = 20;
+console.log(y); // 20
+
+
+console.log(z); // undefined
+var z = 30;
+console.log(z); // 30
+
+/*let and const: Variables are hoisted but uninitialized, leading to a ReferenceError if accessed before the declaration line.
+
+var: Variables are hoisted and initialized with undefined, allowing access before the declaration without errors.*/
