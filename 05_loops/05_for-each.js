@@ -49,3 +49,20 @@ const myCoding = [
 myCoding.forEach((item) => {
     console.log(item.languageName);
 });
+
+//++++++++++++++++++interesting++++++++++++++
+
+const Coding = ["js", "ruby", "java", "python", "cpp"];
+
+// The forEach() method is used to iterate over each element in the array.
+// It does not return a new array; it simply executes the provided function for each array element.
+// In this example, the return statement within the forEach() loop does not affect the values array.
+
+const values = coding.forEach( (item) => {
+    console.log(item);
+    return item; // This return statement does nothing in the context of forEach()
+});
+
+// Since forEach() does not return an array, 'values' will be 'undefined'.
+console.log(values); // Output: undefined
+
