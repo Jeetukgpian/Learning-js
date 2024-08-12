@@ -37,6 +37,47 @@
     // Append the div to the body of the document
     document.body.appendChild(div);
 
+    //+++++++++++++++++Parent and childre++++++++++++
+    // Create a child <span> element and add it to the div
+        const span = document.createElement('span');
+    span.textContent = " - Enjoy coding!";
+    div.appendChild(span);
+
+    // Append the div to the body of the document
+    document.body.appendChild(div);
+
+    // Access the parent of the <div> (which is the body element)
+    const parentOfDiv = div.parentNode;
+    console.log('Parent of div:', parentOfDiv);
+    console.log(parentOfDiv.children)
+    //parentOfDiv.childNodes returns a NodeList of all child nodes of the parentOfDiv element, which is the body element in this case.
+    console.log(parentOfDiv.childNodes);
+
+    // Access the children of the <div>
+    const childrenOfDiv = div.childNodes;
+    console.log('Children of div:', childrenOfDiv);
+
+    // Access the first child of the <div> (the text node "Chai aur code")
+    const firstChildOfDiv = div.firstChild;
+    console.log('First child of div:', firstChildOfDiv);
+
+    // Access the second child of the <div> (the <span> element)
+    const secondChildOfDiv = div.lastChild;
+    console.log('Second child of div:', secondChildOfDiv);
+
+    // Access the parent of the <span> element (which is the <div> element)
+    const parentOfSpan = span.parentNode;
+    console.log('Parent of span:', parentOfSpan);
+
+    // Access the previous sibling of the <span> element (which is the text node "Chai aur code")
+    const previousSiblingOfSpan = span.previousSibling;
+    console.log('Previous sibling of span:', previousSiblingOfSpan);
+
+    // Access the next sibling of the first child of <div> (which is the <span> element)
+    const nextSiblingOfFirstChild = firstChildOfDiv.nextSibling;
+    console.log('Next sibling of first child of div:', nextSiblingOfFirstChild);
+
+
     // After this script runs, the output will be:
     // 1. A <div> element with a random ID (between 1 and 11), class name 'main', title 'generated title'.
     // 2. The div will have a green background and 12px padding.
