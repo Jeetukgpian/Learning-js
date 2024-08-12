@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+</body>
+<script>
+    // Create a new <div> element
+    const div = document.createElement('div');
+    // Log the newly created div element to the console (it will be an empty <div> at this point)
+    console.log(div);
+
+    // Add a class name 'main' to the div
+    div.className = "main"; //overite the class if already given
+
+    // Set the ID of the div to a random number between 1 and 11
+    div.id = Math.round(Math.random() * 10 + 1);
+
+    // Add a title attribute with the value "generated title"
+    div.setAttribute("title", "generated title"); //will not overite if already given it create a new attribute
+
+    // Set the background color of the div to green and add 12px padding
+    div.style.backgroundColor = "green";
+    div.style.padding = "12px";
+
+    // div.innerText="Chai aur code" => not preffered
+    // Create a text node with the content "Chai aur code"
+    const addText = document.createTextNode("Chai aur code");
+
+    // Append the text node to the div
+    div.appendChild(addText);
+
+    // Append the div to the body of the document
+    document.body.appendChild(div);
+
+    // After this script runs, the output will be:
+    // 1. A <div> element with a random ID (between 1 and 11), class name 'main', title 'generated title'.
+    // 2. The div will have a green background and 12px padding.
+    // 3. The text "Chai aur code" will be displayed inside the div.
+    // 4. The entire div will be appended to the body of the page, making it visible to the user.
+</script>
+</html>
