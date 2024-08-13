@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // Function to add a new language to the list using innerHTML
+    function addLanguage(langName){
+         const li = document.createElement('li');  // Create a new <li> element
+         li.innerHTML = `${langName}`;  // Set the content of the <li> using innerHTML
+         document.querySelector('.language').appendChild(li);  // Append the <li> to the <ul> with class 'language'
+    }
+    addLanguage("Python");  // Add "Python" to the list
+    addLanguage("TypeScript");  // Add "TypeScript" to the list
+
+    // Function to add a new language to the list using textContent (more optimal)
+    function addOptiLanguage(langName){
+        const li = document.createElement('li');  // Create a new <li> element
+        li.appendChild(document.createTextNode(langName));  // Set the content of the <li> using a text node
+        document.querySelector('.language').appendChild(li);  // Append the <li> to the <ul> with class 'language'
+    }
+    addOptiLanguage('GoLang');  // Add "GoLang" to the list
+
+    // Editing the second language in the list
+    const secondLang = document.querySelector("li:nth-child(2)");  // Select the second <li> in the list
+    console.log(secondLang);
+    // secondLang.innerHTML = "Mojo";  // Alternative: directly change the innerHTML of the second <li> - not an optimised approach
+    const newli = document.createElement('li');  // Create a new <li> element
+    newli.textContent = "Mojo";  // Set the content of the new <li> to "Mojo"
+    secondLang.replaceWith(newli);  // Replace the second <li> with the new <li>
+
+    // Editing the first language in the list using outerHTML
+    const firstLang = document.querySelector("li:first-child");  // Select the first <li> in the list
+    firstLang.outerHTML = '<li>TypeScript</li>';  // Replace the first <li> with new content
+
+    // Removing the last language from the list
+    const lastLang = document.querySelector('li:last-child');  // Select the last <li> in the list
+    lastLang.remove();  // Remove the selected <li> from the DOM
+</script>
+</html>
