@@ -1,0 +1,23 @@
+.container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1{
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+button{
+    border: none;
+    border-radius: 4px;
+    background-color: black;
+    color: white;
+    margin-right: 5px;
+    font-size: xx-large;
+    min-width: 100px;
+    min-height: 50px;
+}
