@@ -3,7 +3,7 @@
 /*
     -Synchronous code is executed line by line, in the order it appears. Each statement must complete before the next one is executed.
 
-Blocking Nature:
+Blocking Nature/code: Blocks the after code
 
     -If a line of code takes a long time to execute (e.g., a large loop or a network request), it blocks the execution of subsequent lines until it finishes.
 Example:
@@ -14,7 +14,7 @@ console.log('Second'); // Executed only after the alert is dismissed
 Characteristics:
 
 Simple to understand and debug.
-Blocking operations can make the application unresponsive.
+Blocking operations can make the application unresponsive. - they have their own use cases
 Use Cases:
 
 Good for simple, sequential operations where blocking is not an issue.
@@ -25,12 +25,16 @@ Definition:
     -Asynchronous code allows other tasks to run while waiting for long operations to complete, without blocking the main thread.
 
 Non-blocking Nature:
-
+    //Api request, setTimeout, setInterval
     -Asynchronous operations (e.g., API calls, timers) can be executed in the background, allowing the main program flow to continue.
 
 Examples of Asynchronous Operations:
 
     setTimeout and setInterval: Execute code after a delay.
+
+    setTimeout= do it only once after the set time
+    setInterval = do it again and again after each time interval setted untill not stop 
+
     Promises and async/await: Handle operations that return values in the future.
 ++++++++++++++++++++++++Do it later++++++++++++++++++
 AJAX/fetch API: Make asynchronous HTTP requests.
@@ -103,8 +107,7 @@ Syntactic sugar built on top of Promises, allowing asynchronous code to be writt
 async Function:
 
 Declaring a function as async means it returns a Promise.
-javascript
-Copy code
+j
 async function fetchData() {
     return 'Data fetched';
 }
@@ -113,8 +116,7 @@ fetchData().then(data => console.log(data)); // Logs "Data fetched"
 await Keyword:
 
 Pauses the execution of the async function until the Promise is resolved, without blocking the main thread.
-javascript
-Copy code
+
 async function fetchData() {
     let result = await new Promise((resolve) => {
         setTimeout(() => resolve('Data fetched'), 1000);
@@ -126,8 +128,7 @@ fetchData();
 Error Handling:
 
 Use try...catch to handle errors in async/await code.
-javascript
-Copy code
+
 async function fetchData() {
     try {
         let result = await new Promise((resolve, reject) => {

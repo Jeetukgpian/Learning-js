@@ -1,0 +1,41 @@
+body{
+    color: white;
+    background-color: black;
+}
+
+#insert{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.headings{
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+
+.color {
+    padding: 10px;
+    min-width: 300px;
+    height: 100px;
+    border: 1px yellow solid;
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    font-size: xx-large;
+}
+
+h1{
+    color: yellow;
+}
+
+th{
+    color: yellow;
+    padding: 10px;
+}
