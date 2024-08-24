@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    <!-- Description of the XMLHttpRequest readyState values -->
+    <!-- These values indicate the state of the XMLHttpRequest object during the request lifecycle -->
+    0	UNSENT	Client has been created. open() not called yet.
+    1	OPENED	open() has been called.
+    2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+    3	LOADING	Downloading; responseText holds partial data.
+    4	DONE	The operation is complete.
+</body>
+<script>
+    // Define the API URL from which data is to be fetched
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+
+    // Create a new XMLHttpRequest object to interact with the server
+    const xhr = new XMLHttpRequest();
+
+    // Initialize a request using the 'open' method
+    // This specifies the type of request (GET) and the URL to be fetched
+    xhr.open('GET', requestUrl);
+
+    // Set up an event handler to process the response when the readyState changes
+    xhr.onreadystatechange = function(){
+        // Log the current readyState to the console (for debugging purposes)
+        console.log(xhr.readyState);
+
+        // Check if the request is complete (readyState 4)
+        if (xhr.readyState === 4){
+            // Parse the JSON response from the server into a JavaScript object
+            const data = JSON.parse(this.responseText);
+
+            // Log the type of the data received (should be 'object')
+            console.log(typeof data);
+
+            // Log the number of followers of the user retrieved from the API response
+            console.log(data.followers);
+        }
+    }
+
+    // Send the request to the server
+    xhr.send();
+</script>
+</html>
