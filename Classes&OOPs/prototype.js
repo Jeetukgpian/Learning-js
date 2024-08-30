@@ -61,7 +61,7 @@ const TASupport = {
     makeAssignment: 'JS assignment',
     fullTime: true,
     __proto__: TeachingSupport  // Setting the prototype manually to inherit from TeachingSupport
-}
+} 
 
 // Setting the prototype of Teacher to be User
 Teacher.__proto__ = User
